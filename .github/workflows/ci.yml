@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    uses: clawto/.github/.github/workflows/skill-ci.yml@main
+    with:
+      skill_name: crypto-monitor

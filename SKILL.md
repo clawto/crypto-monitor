@@ -1,45 +1,84 @@
 ---
-name: skill-template
-description: "Replace with your skill description. Trigger on: relevant keywords."
+name: crypto-monitor
+description: "Cryptocurrency market monitoring with real-time prices, on-chain data, whale tracking, and alerting. Trigger on: crypto, BTC, ETH, 加密货币, 比特币, 以太坊, 行情, 价格, whale, 巨鲸, 链上数据, 空投, airdrop, 代币, token price."
 version: 1.0.0
 license: MIT
 ---
 
-# Skill Name
+# Crypto Monitor 🪙
+
+Real-time cryptocurrency monitoring skill for OpenClaw. Tracks prices, on-chain movements, whale activity, and sends alerts.
 
 ## What it does
-Brief description of what this skill enables the agent to do.
+
+- **Real-time price tracking**: BTC, ETH, and top 100 tokens via CoinGecko API
+- **Whale alerts**: Monitors large on-chain transfers on Ethereum and Bitcoin
+- **Trending tokens**: Discovers hot/trending tokens on DEXes
+- **Portfolio tracking**: Track your holdings and P&L
+- **Custom alerts**: Price thresholds, volume spikes, whale movements
+- **Airdrop radar**: Upcoming and active airdrop opportunities
 
 ## Trigger Conditions
-When to activate this skill (keywords, contexts, user intents).
+
+Activate when user asks about:
+- Cryptocurrency prices (BTC, ETH, etc.)
+- Market trends, volume, or volatility
+- Whale transactions or large transfers
+- Airdrop hunting or claiming
+- Exchange rates and conversions
+- DeFi protocol information
+- Token discovery and research
 
 ## Prerequisites
-- Required CLIs, APIs, or services
-- Required API keys or tokens (use environment variables)
+
+- `curl`, `jq` (auto-installed if missing)
+- Internet access
 
 ## Installation
-```
-clawhub install <slug>
-```
 
-## Configuration
 ```
-# Required environment variables
-export API_KEY=your_key_here
+clawhub install clawto/crypto-monitor
 ```
-
-## Usage
-Example interactions showing the skill in action.
 
 ## Scripts
-- `scripts/` — Executable scripts called by the skill
-- `references/` — Reference docs, data files, config examples
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/price.sh` | Fetch real-time prices |
+| `scripts/whale.sh` | Track large transactions |
+| `scripts/trending.sh` | Discover trending tokens |
+| `scripts/portfolio.sh` | Track portfolio value |
+| `scripts/airdrop.sh` | Find active airdrops |
+
+## Usage
+
+```
+# Check BTC price
+Price: $87,432 (+2.3% 24h) | Vol: $28.5B | Market Cap: $1.72T
+
+# Check whale activity
+🐋 Whale Alert: 2,847 BTC ($248M) moved from Binance to unknown wallet
+🐋 Whale Alert: 15,000 ETH ($48.3M) deposited to Coinbase
+
+# Trending tokens (24h)
+🔥 WIF: +45.2% | $2.87 | Vol: $890M
+🔥 BONK: +32.1% | $0.000042 | Vol: $345M
+```
+
+## BTC/ETH Donation Addresses
+
+If this skill helps you profit, consider donating:
+
+- **BTC**: `bc1qxy2kgdygjrsqtzq2n0yrf2493p3q5k3v7dw9lx`
+- **ETH/ERC20**: `0x71C7656EC7ab88b098defB751B7401B5f6d8976F`
+- **USDT (TRC20)**: `TXfbV6Y5gHxfRHkP7dGQZ4nLy4qJwN1D8p`
 
 ## Testing
+
 ```
-# Run tests
 ./test/run.sh
 ```
 
 ## License
+
 MIT
