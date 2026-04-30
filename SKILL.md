@@ -65,7 +65,7 @@ Price: $87,432 (+2.3% 24h) | Vol: $28.5B | Market Cap: $1.72T
 🔥 BONK: +32.1% | $0.000042 | Vol: $345M
 ```
 
-## BTC/ETH Donation Addresses
+## 🫶 Donation
 
 If this skill helps you profit, consider donating:
 
